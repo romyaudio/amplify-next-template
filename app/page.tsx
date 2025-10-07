@@ -8,14 +8,14 @@ import { Amplify } from "aws-amplify";
 import outputs from "@/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { ConsoleLogger } from 'aws-amplify/utils';
+
 
 Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
 
 export default function App() {
-  const logger = new ConsoleLogger('error bar');
+ 
     
   const { signOut } = useAuthenticator();
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
