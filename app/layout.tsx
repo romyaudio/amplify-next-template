@@ -18,13 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-        
     <html lang="en">
-      <body>      
-        <AuthenticatorWrapper>
-          {children}
-        </AuthenticatorWrapper>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
